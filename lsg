@@ -80,7 +80,10 @@
 
 # The command we'll actually run for listing.
 # Replacing this with 'gls' on MacOS with GNU coreutils will run the gnu version instead.
-ls='ls'
+# ls='ls'
+# Use lsd instead of ls
+# TODO: Ensure lsd is installed and available
+ls='lsd'
 
 # Note: Decide what to do about GNU options for escaping (-b, -N, -q)
 #       These won't appear often in filenames, but we're trying to be all
@@ -96,7 +99,7 @@ function warning() {
 # Our custom switches
 lsg_nest=${LSG_NEST:-}
 
-ls_switches=()
+ls_switches=("icon=always")
 special=
 warned=false
 # Track the switches we pass to ls in ls_switches

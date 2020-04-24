@@ -99,7 +99,7 @@ function warning() {
 # Our custom switches
 lsg_nest=${LSG_NEST:-}
 
-ls_switches=("icon=always")
+ls_switches=("--icon=always")
 special=
 warned=false
 # Track the switches we pass to ls in ls_switches
